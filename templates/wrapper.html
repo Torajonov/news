@@ -107,8 +107,8 @@ else document.getElementById("doc_time").innerHTML = date_time;
 </div>
 <div class="col-md-4">
 <div class="logo">
-<a href="index.html"><img src="{% static 'assets/img/logo.png' %}" alt="Tech NewsLogo"></a>
-</div>
+<a href="{% url 'mynews:index' %}"><img src="{% static 'assets/img/logo.png' %}" alt="Tech NewsLogo"></a>
+</div> 
 <!-- Logo Section -->
 </div>
 <div class="col-md-4">
