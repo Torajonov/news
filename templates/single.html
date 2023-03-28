@@ -37,13 +37,13 @@
             <b>{{ news.shared }} marta</b> <span class="share_ic">Ulashildi</span>
         </a>
         <input type="hidden" id="news_id" value="{{ news.id }}">
-        <a href="#" onclick="Share.telegram('http://127.0.0.1:8080/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm tw-ic"><i class="fa fa-send"></i></a>
+        <a href="http://t.me/" onclick="Share.telegram('https://www.bestinvest.uz/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm tw-ic"><i class="fa fa-send"></i></a>
         
-        <a href="#" onclick="Share.facebook('http://127.0.0.1:8080/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
+        <a href="http://facebook.com/" onclick="Share.facebook('https://www.bestinvest.uz/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm fb-ic"><i class="fa fa-facebook"></i></a>
         <!--Twitter-->
         <!--Google +-->
    
-<!--         <a href="#" onclick="Share.instagram('http://127.0.0.1/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm inst-ic"><i class="fa fa-instagram"> </i></a>-->
+    <a href="http://Instagram.com/" onclick="Share.instagram('https://www.bestinvest.uz/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm inst-ic"><i class="fa fa-instagram"> </i></a>
 
     <!--<a href="#" class="icons-sm tmb-ic"><i class="fa fa-ge"> </i></a>
         Pinterest
@@ -157,7 +157,7 @@ var news_id = document.getElementById('news_id').value;
 <br>
 <br>
         <div class="entity_social">
-            <span><i class="fa fa-share-alt"></i>{{ news.shared }} marta <a href="#">Ulashildi</a> </span>
+           
             <span><i class="fa fa-comments-o"></i>{{ news.comment}} ta <a href="#">Muxokamalar</a> </span>
         </div>
         <!-- entity_social -->
@@ -168,53 +168,7 @@ var news_id = document.getElementById('news_id').value;
 </div>
 <!-- entity_wrapper -->
 <br><br>
-<div class="related_news">
-    <div class="entity_inner__title header_purple">
-        <h2><a href="#">O'xshash yangiliklar</a></h2>
-    </div>
-    <!-- entity_title -->
 
-    <div class="row">
-             {% if related %}
-            {% for n in  related %}
-            {% if n.id == news.id %}
-            {% else %}
-            <div class="col-md-6">
-                <div class="media">
-                    <div class="media-left">
-            <a href="{{ n.get_absolute_url }}"><img class="media-object" src="{{ n.image_one.url}}"
-                                       width="125" height="125" alt="Generic placeholder image"></a>
-                    </div>
-                    <div class="media-body">
-                        <span class="tag purple">{{ n.category }}</span>
-
-                        <h3 class="media-heading"><a href="{{ n.get_absolute_url }}" target="_self">{{ n.description|truncatewords:15}}</a></h3>
-                        <span class="media-date"><a href="{{ n.get_absolute_url }}">{{ n.reg_data|date:'Y,m,d H:m'}}</a>, Qo'shdi: <a href="#">{{ n.added }}</a></span>
-
-                        <div class="media_social">
-                            <span><a href="#" ><i class="fa fa-share-alt"></i>{{ n.shared }} marta</a> ulashildi</span>
-                            <span><a href="#"><i class="fa fa-comments-o"></i>{{ n.comment }} marta</a> muxokama qilindi</span>
-                        </div>
-                    </div>
-                </div>
-  
-
-               
-            </div>
-            {% endif %}
-                               {% endfor %}
-            {% else %}
-            <div class="col-md-12 hidden-sm hidden-md hidden-lg">
-                <div class="text-center">
-                    <div class="alert alert-warning">
-                        <h3>Xozircha yangliklar topilmadi</h3>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-
-    </div>
-</div>
 <!-- Related news -->
 
 
