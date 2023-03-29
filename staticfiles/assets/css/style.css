@@ -1330,12 +1330,12 @@ section {
 .widget_black h2:after {
     display: table;
     position: relative;
-    left: 45%;
+    left: 56%;
     bottom: 10px;
     height: 2px;
     content: " ";
     text-shadow: none;
-    width: 15%;
+    width: 10%;
     background-color: #000;
     z-index: 2;
 }
@@ -1660,7 +1660,7 @@ section {
 .footer_widget_title h3:after {
     display: table;
     position: relative;
-    left: 115px;
+    left: 185px;
     bottom: 10px;
     height: 2px;
     content: " ";
