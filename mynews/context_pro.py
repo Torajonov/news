@@ -9,7 +9,7 @@ def news(request):
 			mini = News.objects.filter(home=False,slider=False).order_by('-id')[4:8]
 			mini_2 = News.objects.filter(home=False,slider=False).order_by('-id')[8:12]
 			slider = News.objects.filter(slider=True).order_by('-id')[:6]
-			popular = News.objects.filter(popular=True).order_by('-id')[:2]
+			popular = News.objects.filter(popular=True).order_by('-id')[:8]
 			reviews = News.objects.all().order_by('-views')[:2]
 			most_commented = News.objects.all().order_by('-comment')[:2]
 			print(most_commented)
