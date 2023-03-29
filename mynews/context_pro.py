@@ -2,7 +2,7 @@ from .models import *
 
 def news(request):
 		categories = Category.objects.all()
-		home = News.objects.filter(home=True).order_by('-id')[:1]
+		home = News.objects.filter(home=True).order_by('-id')[:2]
 		last_4 = News.objects.filter(home=False,slider=False).order_by('-id')[:8]
 		footer = News.objects.filter(home=False,slider=False).order_by('?')[:1]
 		try:
