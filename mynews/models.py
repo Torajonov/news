@@ -125,4 +125,3 @@ class Comments(models.Model):
 	author = models.CharField(max_length=25)
 	email = models.CharField(max_length=45)
 	comment = models.TextField()
-			
