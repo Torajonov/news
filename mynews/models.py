@@ -46,7 +46,7 @@ class News(models.Model):
 	subcategory = models.ForeignKey(SubCategory, on_delete = models.PROTECT, verbose_name="SubKategoriya ",blank=True, null=True)		
 	title = models.CharField('Yanglik nomi *',max_length=90)
 	slug = models.SlugField('Kalit so`z *',max_length=25)	
-	description = models.TextField('Yanglik matni *',max_length=1550)
+	description = models.TextField('Yanglik matni *',max_length=4000)
 	views = models.PositiveIntegerField("Ko'rildi",default=0, blank=True)
 	home = models.BooleanField("Bosh saxifaga",default=False)
 	popular = models.BooleanField("Populyar",default=False)
