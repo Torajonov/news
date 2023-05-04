@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.conf import settings
 from PIL import Image
 from os import path
-# Create your models here.
 
 def image_folder(instance, filename):
 	filename = instance.slug +'.'+filename.split('.')[1]
