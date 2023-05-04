@@ -97,6 +97,4 @@ def search_news(request):
 	except:
 		data = {'status':'error','news':[]}
 	print(data)	
-	return JsonResponse(data)						
-
-
+	return JsonResponse(data)
