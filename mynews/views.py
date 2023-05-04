@@ -5,9 +5,9 @@ from django.views.generic import View
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect,JsonResponse,Http404
 
-
-# Create your views here.
-
+class Comment(View):
+	def get_objects_or_404
+		name = models.Model
 class IndexView(View):
 	def get(self, request):
 		return render(request, 'index.html' )
