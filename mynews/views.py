@@ -26,6 +26,8 @@ class CategoryView(View):
 		# 	raise Http404("Category no matches the given query") 	
 		news = News.objects.filter(category=category)
 		context = {'news':news,'category':category}
+
+
 		return render(request, 'category.html', context)
 
 class NewsView(View):
@@ -98,7 +100,3 @@ def search_news(request):
 		data = {'status':'error','news':[]}
 	print(data)	
 	return JsonResponse(data)
-def contact(request):
-	name = request.POST['name']
-	contact = request.POST['contact']
-	return render(request, 'index.html')
