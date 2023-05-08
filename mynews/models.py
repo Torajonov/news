@@ -8,7 +8,6 @@ def image_folder(instance, filename):
 	filename = instance.slug +'.'+filename.split('.')[1]
 	return"{0}/{1}".format(instance.slug, filename)
 
-
 class Category(models.Model):
 
 	title = models.CharField('Kategoriya nomi *',max_length=50)

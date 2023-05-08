@@ -98,3 +98,7 @@ def search_news(request):
 		data = {'status':'error','news':[]}
 	print(data)	
 	return JsonResponse(data)
+def contact(request):
+	name = request.POST['name']
+	contact = request.POST['contact']
+	return render(request, 'index.html')
