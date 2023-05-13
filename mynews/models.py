@@ -117,11 +117,3 @@ class News(models.Model):
 				Image.ANTIALIAS
 				)
 				image.save(filepath)
-
-
-class Comments(models.Model):
-	news = models.ForeignKey(News, on_delete=models.CASCADE)
-	author = models.CharField(max_length=25)
-	email = models.CharField(max_length=45)
-	comment = models.TextField()
-	contact = models.TextField(max_length=250)
