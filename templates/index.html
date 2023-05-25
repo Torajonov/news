@@ -10,9 +10,8 @@
 
 <div class="category_section tablet">
     <div class="article_title header_pink">
-        <h3><a href="#" target="self">So'nggi yangiliklar</a></h3>
+        <h3><a href="#" target="self">So'nggi yangiliklar.</a></h3>
     </div>
-    <!-- Mobile News Section -->
 
     <div class="category_article_wrapper">
         <div class="row">
@@ -25,33 +24,25 @@
                                                                    alt="feature-top">
                         </a>
                     </div>
-                    <!-- top_article_img -->
 
                     <span class="tag pink"><a href="{{ n.category.get_absolute_url }}" target="_self">{{ n.category }}</a></span>
 
                     <div class="category_article_title">
                         <h2><a href="{{ n.get_absolute_url }}" target="_self">{{ n }} </a></h2>
                     </div>
-                    <!-- category_article_title -->
-
                     <div class="article_date"><a href="#">{{ n.reg_data}}</a>, Qo'shdi: <a href="#">{{ n.added }}</a></div>
-                    <!---article_date-->
-                    <!-- article_date -->
-
+                    
                     <div class="category_article_content">
                        {{ n.description|truncatewords:15}}
                     </div>
-                    <!-- category_article_content -->
-
+                    
                     <div class="media_social">
                         
                         <span><i class="fa fa-comments-o"></i><a href="#">{{ n.comment }}</a> Muxokama qilindi</span>
                     </div>
-                    <!-- media_social -->
-
+                    
                 </div>
-                <!-- category_article_body -->
-
+                
             </div>
             {% endfor %}
             {% else %}
