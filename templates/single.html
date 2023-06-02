@@ -34,7 +34,7 @@
     <div class="entity_social">
         <a href="#" class="icons-sm sh-ic">
             <i class="fa fa-share-alt"></i>
-            <b>{{ news.shared }} marta.</b> <span class="share_ic">Ulashildi</span>
+            <b>{{ news.shared }} marta</b> <span class="share_ic">Ulashildi</span>
         </a>
         <input type="hidden" id="news_id" value="{{ news.id }}">
         <a href="http://t.me/" onclick="Share.telegram('https://www.bestinvest.uz/news/{{ news.slug }}','{{ news }}','{{ news.image_one.url }}','{{ news.description|truncatewords:10}}')" class="icons-sm tw-ic"><i class="fa fa-send"></i></a>
